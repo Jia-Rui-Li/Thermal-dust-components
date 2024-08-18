@@ -8,6 +8,7 @@ More technical details can be found in the following paper:
 ## 1.1 Dependencies
 The main dependencies and their versions are listed below: 
 
+`ubuntu 20.04`
 `Python 3.8.10`
 `astropy 5.2.2`
 `healpy 1.16.5`
