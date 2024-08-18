@@ -21,17 +21,22 @@ The main dependencies and their versions are listed below:
 > git clone https://github.com/Jia-Rui-Li/Thermal-dust-components.git
 > 
 > cd Thermal-dust-components
+> 
 > bash configure.sh
 
 The default behavior of `configure.sh` is a full installation of python packages and promordial .fits file. 
 
 ### Installation of python packages
 >sudo apt-get update
+>
 >sudo apt-get install python3
+>
 >sudo apt-get install python3-pip
+>
 >pip3 install numpy
+>
 >pip3 install matplotlib
-
+>
 >pip3 install healpy
 
 ### Download .fits files 
