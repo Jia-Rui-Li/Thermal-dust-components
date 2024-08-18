@@ -19,6 +19,7 @@ The main dependencies and their versions are listed below:
 ## Installation
 
 > git clone https://github.com/Jia-Rui-Li/Thermal-dust-components.git
+> 
 > cd Thermal-dust-components
 > bash configure.sh
 
