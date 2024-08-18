@@ -30,6 +30,7 @@ The default behavior of `configure.sh` is a full installation of python packages
 >sudo apt-get install python3-pip
 >pip3 install numpy
 >pip3 install matplotlib
+
 >pip3 install healpy
 
 ### Download .fits files 
