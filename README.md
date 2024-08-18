@@ -18,8 +18,8 @@ The main dependencies and their versions are listed below:
 
 ## Installation
 
-> git clone
-> mkdir Thermal_Dust_Component
+> git clone https://github.com/Jia-Rui-Li/Thermal-dust-components.git
+> cd Thermal-dust-components
 > bash configure.sh
 
 The default behavior of `configure.sh` is a full installation of python packages and promordial .fits file. 
