@@ -17,6 +17,8 @@ The main dependencies and their versions are listed below:
 `pip 20.0.2`
 `scipy 1.10.1`
 
+The computer configuration should be no less than 12 cores and 64GB of memory. 
+
 ## Installation
 
 > git clone https://github.com/Jia-Rui-Li/Thermal-dust-components.git
