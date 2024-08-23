@@ -30,17 +30,14 @@ bash configure.sh
 The default behavior of `configure.sh` is a full installation of python packages and promordial .fits file. 
 
 ### Installation of python packages
->sudo apt-get update
->
->sudo apt-get install python3
->
->sudo apt-get install python3-pip
->
->pip3 install numpy
->
->pip3 install matplotlib
->
->pip3 install healpy
+```
+sudo apt-get update
+sudo apt-get install python3
+sudo apt-get install python3-pip
+pip3 install numpy
+pip3 install matplotlib
+pip3 install healpy
+```
 
 ### Download .fits files 
 All of the .fits files about Planck are downloaded from [Caltech database](https://irsa.ipac.caltech.edu/data/Planck/), 
@@ -49,31 +46,40 @@ Files about [M19](https://doi.org/10.1051/0004-6361/201834394) are downloaded fr
 saved in directory /Melis/. 
 
 # 2. Running
->bash run.sh
+```
+bash run.sh
+```
 ## Step-1
->python Inpaint_Rebeam_HFI_maps.py
+```
+python Inpaint_Rebeam_HFI_maps.py
+```
 
 1. Masking HFI maps with point source masks. 
 2. Iterating 2000 times to in-paint the holes after masking. 
 
 ## Step-2
->python Dust_Planck_data_model.py
+```
+python Dust_Planck_data_model.py
+```
 1. Isolating dust data maps from Planck HFI maps. 
 2. Calculating dust model maps from M13, M15, and M19. 
 
 ## Step-3
->python Dust_Planck_data_model_No_color_correction.py
-
+```
+python Dust_Planck_data_model_No_color_correction.py
+```
 Same with Step-2, but without color correction. 
 
 ## Step-4
->python Statistics.py
-
+```
+python Statistics.py
+```
 Calculating statistical quantities, including linear ratio R (for model), R' (for data), and correlation coefficient C' (for data). 
 
 ## Step-5
->python Plots.py
-
+```
+python Plots.py
+```
 Plotting. 
 
 # 3. Citation
