@@ -1,6 +1,5 @@
 # 0. Introduction
 This project is used to test the goodness of the single-component modified blackbody thermal dust emission model in CMB experiments. 
-This project can compare the prediction of single-component models from Planck 2013 ([M13](https://doi.org/10.1051/0004-6361/201323195)), Planck 2015 ([M15](https://doi.org/10.1051/0004-6361/201629022)), and [M19](https://doi.org/10.1051/0004-6361/201834394), with the Planck 2018 HFI maps ([A&A 641, A3, (2020)](https://doi.org/10.1051/0004-6361/201832909)). 
 
 More technical details can be found in the following paper: 
 
