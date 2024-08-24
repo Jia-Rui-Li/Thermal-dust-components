@@ -394,7 +394,7 @@ def reading_model_dust(freq_str, year, unit, Nside):
         # Dust equilibrium temperature from Planck 2015, in unit of K, FWHM = 5'
         dust_temperature = healpy.read_map(root_dir+"/PR2-2015/COM_CompMap_Dust-GNILC-Model-Temperature_2048_R2.01.fits", h=False, field=0)
     elif year == "2019":
-        # Optical depth at 353 GHz from A&A 623, A21 (2019), FWHM = 5'
+        # Optical depth at 353 GHz from A&A 623, A21 (2019), FWHM = 5', https://cdsarc.cds.unistra.fr/ftp/J/A+A/623/A21/ReadMe
         tau = healpy.read_map(root_dir+"/Melis/tau.fits", h=False, field=0)
         # Dust emission spectral index from A&A 623, A21 (2019), FWHM = 5'
         beta = healpy.read_map(root_dir+"/Melis/beta.fits", h=False, field=0)
