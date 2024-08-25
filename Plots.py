@@ -23,17 +23,17 @@ def thermal_dust_map(freq_str, unit):
         unit_str = "$\mu\mathrm{K_{CMB}}$"
     elif unit == "MJy_sr":
         unit_str = "$\mathrm{MJy\,sr^{-1}}$"
-    
+
     if freq_str == "100":
-        MAX = 500
+        MAX = 200
     elif freq_str == "143":
-        MAX = 500
+        MAX = 300
     elif freq_str == "217":
-        MAX = 1000
+        MAX = 800
     elif freq_str == "353":
         MAX = 5000
     elif freq_str == "545":
-        MAX = 10
+        MAX = 7
     elif freq_str == "857":
         MAX = 20
     dust_map = healpy.read_map(root_dir+"/results/dust_data_"+unit+"_"+freq_str+"GHz.fits")
@@ -106,7 +106,7 @@ def region(freq_name, color_correction, smooth_degree, disk_degree, galac_mask, 
     # fraction_reliable = reliable region / valid region
     fraction_reliable = numpy.array(pixel_list).shape[0]/numpy.array(total_pixel_list).shape[0]
     matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-    healpy.mollview(mosaic_data[2], cmap="jet", min=0, max=1, cbar=False, hold=True)
+    healpy.mollview(mosaic_data[2], cmap="jet", min=0, max=2, cbar=False, hold=True)
     matplotlib.pyplot.title("Reliable region of "+str_name+"\n $f_\mathrm{rel} = $"+"{:.1f}".format(100*fraction_reliable)+"%", fontsize=18)
     matplotlib.pyplot.savefig(root_dir+"/figure/Region_color_correction_"+color_correction+"_"+freq_name+"_galactic_mask_"+galac_mask+"_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".pdf", bbox_inches="tight")
     matplotlib.pyplot.close()
@@ -171,38 +171,62 @@ low_galac_mask = numpy.zeros(12*2048**2, dtype=int)
 low_galac_list = healpy.query_strip(2048, 2/3*numpy.pi, 1/3*numpy.pi, inclusive=True)
 low_galac_mask[low_galac_list] = 1
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where(source_point_mask > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(source_point_mask, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("Point source mask at 857 GHz", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_point_source_857.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where(compact_mask > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(compact_mask, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("$M_\\mathrm{comp}$", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_compact_source.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where((compact_mask*galac_plane_mask_60) > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(compact_mask*galac_plane_mask_60, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("$M_\\mathrm{comp} \\times M_{60}$", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_galac_plane_60.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where((compact_mask*galac_plane_mask_70) > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(compact_mask*galac_plane_mask_70, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("$M_\\mathrm{comp} \\times M_{70}$", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_galac_plane_70.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where((compact_mask*galac_plane_mask_80) > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(compact_mask*galac_plane_mask_80, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("$M_\\mathrm{comp} \\times M_{80}$", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_galac_plane_80.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
 
+mask = numpy.zeros(12*2048**2, dtype=int)
+mask = mask - 1.6375e+30
+valid= numpy.where((compact_mask*galac_plane_mask_80*low_galac_mask) > 0.9)[0]
+mask[valid] = 1
 matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-healpy.mollview(compact_mask*low_galac_mask, norm="none", cmap="jet", hold=True)
+healpy.mollview(mask, norm="none", cmap="jet", min=0, max=2, cbar=None, hold=True)
 matplotlib.pyplot.title("$M_\\mathrm{comp} \\times M_{80} \\times M_\\mathrm{lat}$", fontsize=20)
 matplotlib.pyplot.savefig(root_dir+"/figure/Mask_low_galac.pdf", bbox_inches="tight")
 matplotlib.pyplot.show()
