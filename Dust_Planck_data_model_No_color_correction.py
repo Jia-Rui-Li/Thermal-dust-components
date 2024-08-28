@@ -40,8 +40,8 @@ trans_857 = HFI_RIMO["BANDPASS_F857"].data.field("transmission")
 
 # When convolving signal with transmission spectra, integration should not start from the minimum value, as it would introduce significant computational errors.
 # Configuration related to integration over frequency for HFI channels
-# Lower limit of integration is 1/5 of the central frequency
-# Upper limit of integration is 5 of the central frequency
+## Lower limit of integration is 1/5 of the central frequency
+## Upper limit of integration is 5 of the central frequency
 # The selection of lower limit and upper limit of integeration ensures that the transmission larger than 1e-6. 
 # There are some negative values in trans_143, 
 # (num = [229 230 231 232 233 234 235 236 252 253 254 255 256 257 258 275 276 277 278 279])
