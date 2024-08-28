@@ -37,9 +37,9 @@ def thermal_dust_map(freq_str, unit):
     elif freq_str == "857":
         MAX = 20
     dust_map = healpy.read_map(root_dir+"/results/dust_data_"+unit+"_"+freq_str+"GHz.fits")
-    matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-    healpy.mollview(dust_map, cmap="jet", unit=unit_str, norm="none", min=0, max=MAX, hold=True)
-    matplotlib.pyplot.title("Thermal dust component at "+freq_str+"GHz", fontsize=18)
+    matplotlib.pyplot.figure(dpi=300, figsize=(3,3))
+    healpy.projview(dust_map, cmap="jet", unit=unit_str, norm="none", min=0, max=MAX, extend="neither", hold=True)
+    matplotlib.pyplot.title("Dust data map at "+freq_str+"GHz", fontsize=12)
     matplotlib.pyplot.savefig(root_dir+"/figure/thermal_dust_component_in_"+freq_str+"GHz.pdf", bbox_inches="tight")
     matplotlib.pyplot.close()
 
@@ -66,23 +66,23 @@ def map_plot(model_name, freq_name, color_correction, smooth_degree, disk_degree
         min1 = 1.8; max1 = 3.8; min2 = 0.95; max2 = 1; min3 = 1.8; max3 = 3.8; min4 = 0.9; max4 = 1;
 
     # R (model)
-    matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-    healpy.mollview(mosaic_model[0], nlocs=6, nest=False, min=min1, max=max1, cmap="jet", hold=True)
-    matplotlib.pyplot.title("$R$ of "+str_name, fontsize=18)
+    matplotlib.pyplot.figure(dpi=300, figsize=(5,5))
+    healpy.mollview(mosaic_model[0], nlocs=5, nest=False, min=min1, max=max1, cmap="jet", hold=True)
+    matplotlib.pyplot.title("$R$ of "+str_name, fontsize=12.5)
     matplotlib.pyplot.savefig(root_dir+"/figure/R_"+model_name+"_color_correction_"+color_correction+"_"+freq_name+"_galactic_mask_"+galac_mask+"_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".pdf", bbox_inches="tight")
     matplotlib.pyplot.close()
 
     # R' (data)
-    matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-    healpy.mollview(mosaic_data[0], nlocs=6, nest=False, min=min3, max=max3, cmap="jet", hold=True)
-    matplotlib.pyplot.title("$R'$ of "+str_name, fontsize=18)
+    matplotlib.pyplot.figure(dpi=300, figsize=(5,5))
+    healpy.mollview(mosaic_data[0], nlocs=5, nest=False, min=min3, max=max3, cmap="jet", hold=True)
+    matplotlib.pyplot.title("$R'$ of "+str_name, fontsize=12.5)
     matplotlib.pyplot.savefig(root_dir+"/figure/R_data_color_correction_"+color_correction+"_"+freq_name+"_galactic_mask_"+galac_mask+"_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".pdf", bbox_inches="tight")
     matplotlib.pyplot.close()
 
     # Correlation between two neighbouring frequency channels (data)
-    matplotlib.pyplot.figure(dpi=300, figsize=(7,7))
-    healpy.mollview(mosaic_data[1], nlocs=6, nest=False, min=min4, max=max4, cmap="jet", hold=True)
-    matplotlib.pyplot.title("Correlation between "+str_name, fontsize=18)
+    matplotlib.pyplot.figure(dpi=300, figsize=(5,5))
+    healpy.mollview(mosaic_data[1], nlocs=5, nest=False, min=min4, max=max4, cmap="jet", hold=True)
+    matplotlib.pyplot.title("Correlation between "+str_name, fontsize=12.5)
     matplotlib.pyplot.savefig(root_dir+"/figure/C_data_color_correction_"+color_correction+"_"+freq_name+"_galactic_mask_"+galac_mask+"_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".pdf", bbox_inches="tight")
     matplotlib.pyplot.close()
     return 1
@@ -92,7 +92,7 @@ def region(freq_name, color_correction, smooth_degree, disk_degree, galac_mask, 
     if freq_name == "1":
         mosaic_data = numpy.load(root_dir+"/results/scatter_points_color_correction_"+color_correction+"_data_100GHz_143GHz_galactic_mask_"+galac_mask+"%_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".npy")
         str_name = "100 - 143 GHz pair"
-    elif freq_name == "2": 
+    elif freq_name == "2":
         mosaic_data = numpy.load(root_dir+"/results/scatter_points_color_correction_"+color_correction+"_data_217GHz_353GHz_galactic_mask_"+galac_mask+"%_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".npy")
         str_name = "217 - 353 GHz pair"
     elif freq_name == "3":
