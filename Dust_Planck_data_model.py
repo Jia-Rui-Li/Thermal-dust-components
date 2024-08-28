@@ -42,40 +42,77 @@ trans_857 = HFI_RIMO["BANDPASS_F857"].data.field("transmission")
 # Configuration related to integration over frequency for HFI channels
 # Lower limit of integration is 1/5 of the central frequency
 # Upper limit of integration is 5 of the central frequency
-
+# The selection of lower limit and upper limit of integeration ensures that the transmission larger than 1e-6. 
+# There are some negative values in trans_143, 
+# (num = [229 230 231 232 233 234 235 236 252 253 254 255 256 257 258 275 276 277 278 279])
+# we have excluded them. 
 # function freq_low_limit() gives the index of the lower integration limit for each channel
+#def freq_low_limit(freq_str):
+#    if freq_str == "100":
+#        return 39
+#    elif freq_str == "143":
+#        return 56
+#    elif freq_str == "217":
+#        return 85
+#    elif freq_str == "353":
+#        return 139
+#    elif freq_str == "545":
+#        return 215
+#    elif freq_str == "857":
+#        return 339
+#    else:
+#        return 1
+
 def freq_low_limit(freq_str):
     if freq_str == "100":
-        return 39
+        return 131
     elif freq_str == "143":
-        return 56
+        return 280
     elif freq_str == "217":
-        return 85
+        return 321
     elif freq_str == "353":
-        return 139
+        return 564
     elif freq_str == "545":
-        return 215
+        return 262
     elif freq_str == "857":
-        return 339
+        return 206
     else:
         return 1
 
+
 # function freq_high_limit() gives the index of the upper integration limit for each channel
+#def freq_high_limit(freq_str):
+#    if freq_str == "100":
+#        return 630
+#    elif freq_str == "143":
+#        return 1078
+#    elif freq_str == "217":
+#        return 1323
+#    elif freq_str == "353":
+#        return 2099
+#    elif freq_str == "545":
+#        return 3755
+#    elif freq_str == "857":
+#        return 7677
+#    else:
+#        return eval("freq_"+freq_str).shape[0]-1
+
 def freq_high_limit(freq_str):
     if freq_str == "100":
-        return 630
+        return 494
     elif freq_str == "143":
-        return 1078
+        return 789
     elif freq_str == "217":
-        return 1323
+        return 847
     elif freq_str == "353":
-        return 2099
+        return 1449
     elif freq_str == "545":
-        return 3755
+        return 2442
     elif freq_str == "857":
-        return 7677
+        return 5622
     else:
         return eval("freq_"+freq_str).shape[0]-1
+
     
 #--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
 # Functions for unit conversion: x_trans(), b_prime_RJ(), b_prime_CMB()
