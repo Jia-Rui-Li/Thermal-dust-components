@@ -131,25 +131,6 @@ def beam_fwhm(freq_str):
     
 
 #--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
-# Smooth and rebeam the inpainted HFI maps to FWHM = 9.66'
-def rebeamed_inpainted_sky_map(freq_str, N_iter, Nside):
-    Nside = int(Nside)
-    SkyMap = healpy.read_map(root_dir+"/results/inpainted_frequency_map_"+freq_str+"GHz_Nside_2048_Niteration_"+str(N_iter)+".fits", h=False, field=0)
-    # There are bad values in Planck HFI maps, they are set to - 1.63750e+30. This step is taken to remove bad values.
-    bad_pixel = numpy.where(SkyMap<-1e+10)[0]
-    for pixel in bad_pixel:
-        neighbour = healpy.get_all_neighbours(nside=Nside, theta=pixel, phi=None)
-        SkyMap[pixel] = numpy.mean(SkyMap[neighbour])
-
-    Lmax = 3*Nside - 1
-    beam1 = healpy.gauss_beam(fwhm=beam_fwhm(freq_str), lmax=Lmax)
-    beam2 = healpy.gauss_beam(fwhm=9.66/60*numpy.pi/180, lmax=Lmax)
-    alm_sky = healpy.map2alm(SkyMap, lmax=Lmax)
-    alm_sky_smooth = healpy.smoothalm(alm_sky, beam_window=beam2/beam1)
-    SkyMap = healpy.alm2map(alm_sky_smooth, nside=Nside)
-    return SkyMap
-
-#--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
 # Map of CMB anisotropies
 def CMB_map(freq_str, unit, Nside):
     Nside = int(Nside)
