@@ -159,7 +159,7 @@ def CMB_map(freq_str, unit, Nside):
         # For CMB anisotropies, T_CMB is independent with frequency
         # From W m^-2 Hz^-1 sr^-1 to MJy/sr
         CMB_map = 1e-6*1e26*CMB_map*part1/part2
-    beam1 = healpy.gauss_beam(fwhm=5/60*numpy.pi/180, lmax=Lmax, pol=False) # A&A 641, A7 (2020) P3
+    beam1 = healpy.gauss_beam(fwhm=5/60*numpy.pi/180, lmax=Lmax, pol=False) # A&A 641, A7 (2020) P3, Table 1
     beam2 = healpy.gauss_beam(fwhm=9.66/60*numpy.pi/180, lmax=Lmax, pol=False)
     alm_CMB = healpy.map2alm(CMB_map, lmax=Lmax)
     alm_CMB_smooth = healpy.smoothalm(alm_CMB, beam_window=beam2/beam1)
