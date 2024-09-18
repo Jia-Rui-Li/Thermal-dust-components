@@ -96,7 +96,7 @@ def map_plot(model_name, freq_name, color_correction, smooth_degree, disk_degree
     matplotlib.pyplot.close()
     return 1
 
-# Scatter plots for dust (data) and the sky map for the points in the scatter plots
+# Valid regions
 def region(freq_name, color_correction, smooth_degree, disk_degree, galac_mask, low_mask, zodiacal_mask): 
     if freq_name == "1":
         mosaic_data = numpy.load(root_dir+"/results/scatter_points_color_correction_"+color_correction+"_data_100GHz_143GHz_galactic_mask_"+galac_mask+"%_smooth_degree_"+"{:01d}".format(int(smooth_degree))+"_disk_degree_"+"{:01d}".format(int(disk_degree))+"_low_galac_mask_"+low_mask+"_zodiacal_mask_"+zodiacal_mask+".npy")
