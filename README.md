@@ -41,10 +41,8 @@ pip3 install astropy
 ```
 
 ### Download .fits files 
-All of the .fits files about Planck are downloaded from [Caltech database](https://irsa.ipac.caltech.edu/data/Planck/), 
-saved in directory /PR1-2013/, /PR2-2015/, /PR3-2018/. 
-Files about [M19](https://doi.org/10.1051/0004-6361/201834394) are downloaded from [https://cdsarc.cds.unistra.fr/ftp/J/A+A/623/A21/](https://cdsarc.cds.unistra.fr/ftp/J/A+A/623/A21/), 
-saved in directory /Melis/. 
+All of the .fits files about Planck are downloaded from [Caltech database](https://irsa.ipac.caltech.edu/data/Planck/). 
+Files about [M19](https://doi.org/10.1051/0004-6361/201834394) are downloaded from [https://cdsarc.cds.unistra.fr/ftp/J/A+A/623/A21/](https://cdsarc.cds.unistra.fr/ftp/J/A+A/623/A21/). 
 
 # 2. Running
 ```
