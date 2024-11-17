@@ -168,7 +168,7 @@ then
     echo 'You have file COM_PCCS_100-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_100-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_100-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_100-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_100-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_100-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_100_R2.01.fits ]]
@@ -176,7 +176,7 @@ then
     echo 'You have file COM_PCCS_100_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_100_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_100_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_100_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_100_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_100_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_143-excluded_R2.01.fits ]]
@@ -184,7 +184,7 @@ then
     echo 'You have file COM_PCCS_143-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_143-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_143-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_143-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_143-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_143-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_143_R2.01.fits ]]
@@ -192,7 +192,7 @@ then
     echo 'You have file COM_PCCS_143_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_143_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_143_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_143_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_143_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_143_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_217-excluded_R2.01.fits ]]
@@ -200,7 +200,7 @@ then
     echo 'You have file COM_PCCS_217-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_217-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_217-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_217-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_217-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_217-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_217_R2.01.fits ]]
@@ -208,7 +208,7 @@ then
     echo 'You have file COM_PCCS_217_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_217_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_217_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_217_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_217_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_217_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_353-excluded_R2.01.fits ]]
@@ -216,7 +216,7 @@ then
     echo 'You have file COM_PCCS_353-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_353-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_353-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_353-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_353-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_353-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_353_R2.01.fits ]]
@@ -224,7 +224,7 @@ then
     echo 'You have file COM_PCCS_353_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_353_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_353_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_353_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_353_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_353_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_545-excluded_R2.01.fits ]]
@@ -232,7 +232,7 @@ then
     echo 'You have file COM_PCCS_545-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_545-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_545-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_545-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_545-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_545-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_545_R2.01.fits ]]
@@ -240,7 +240,7 @@ then
     echo 'You have file COM_PCCS_545_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_545_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_545_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_545_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_545_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_545_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_857-excluded_R2.01.fits ]]
@@ -248,7 +248,7 @@ then
     echo 'You have file COM_PCCS_857-excluded_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_857-excluded_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_857-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_857-excluded_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_857-excluded_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_857-excluded_R2.01.fits'
 fi
 
 if [[ -f PR2-2015/COM_PCCS_857_R2.01.fits ]]
@@ -256,7 +256,7 @@ then
     echo 'You have file COM_PCCS_857_R2.01.fits'
 else
     echo 'You have not file COM_PCCS_857_R2.01.fits, we will download it. '
-    wget -cO PR2-2015/COM_PCCS_857_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2//catalogs/COM_PCCS_857_R2.01.fits'
+    wget -cO PR2-2015/COM_PCCS_857_R2.01.fits 'https://irsa.ipac.caltech.edu/data/Planck/release_2/catalogs/COM_PCCS_857_R2.01.fits'
 fi
 
 
